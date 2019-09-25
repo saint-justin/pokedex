@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------- NAV BAR STYLING ------------- */
+#side_nav{
+    /* Structural */
+    background-color: #F26300;
+    height: 96.5%;
+    width: 17%;
+    position: fixed;
+    padding: 1em;
+    display: inline-flex;
+    flex-direction: column;
+    
+    /* Nav Border */
+    border: solid #B9423E;
+    border-width:  0 1em 0 0;
+}
+
+#pokemon_list{
+    margin-top: 1em;
+    padding-left: 1em 1em 0 0;
+    list-style-type: none;
+    font-family: 'Patua One', cursive;
+    color: #FB9D57;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 69%;
+}
+
+#pokemon_list li{
+    padding-top: .5em;
+    font-size: 1.5em;
+}
+
+#pokemon_list span{
+    color: #B9423E;
+    font-size: 80%;
+}
+
+#pokemon_list li:hover{
+    color: #FFF;
+}
+
+#current_pokemon, #current_pokemon span{
+    color: white;
+}
+
+/* ------------- Scrollbar Rules ------------- */
+::-webkit-scrollbar{
+    width: 0.75em;
+}
+
+::-webkit-scrollbar-track {
+    background: #B9423E; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: orange; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FFF; 
+}
+
+
+/* ------------- MAIN PAGE STYING ------------- */
+#slide_page{
+    display: block;
+    margin-left: 20%;
+    /* need to slide it over to accomodate for the nav bar */
+}
+
+.center{
+    display: block;
+    margin: auto;
+    width: 95%;
+}
+
+#title{
+    text-align: center;
+    margin: 2% 0;
+    font-family: 'Lato', bold;
+    font-size: 6em;
+    /* text-shadow: 4px 0 0.5px #A53623; */
+    color: #B9423E;
+    letter-spacing: 2px;
+    
+}
+
+#main_page{
+    margin: auto;
+    display: inline-flex;
+    flex-direction: column;
+    width: 95%;
+    margin-bottom: 2em;
+}
+
+#main_img{
+    width: 100%;
+    height: 23%;
+}
+
+#pseudo_page{
+    background-color: #E5E5E9;
+    margin: auto;
+    margin-top: 2em;
+    align-items: center;
+    width: 80%;
+    padding: 2em 6em;
+    border-radius: 2em;
+}
+
+#pseudo_page h2{
+    width: 35%;
+    margin: auto;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Patua One', cursive;
+    color: #FB9D57;
+    
+    border-style: solid;
+    border-width: 0.5em 0;
+    background-color: #FFF;
+    border-color: #FFF;
+    border-radius: .25em;
+}
+
+.pseudo_page_inner{
+    background-color: white;
+    padding: 2em 0;
+}
+
+/* ------------- Navigation Bar at the Top ------------- */
+.previous_current_next{
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+}
+
+#previous, #next{
+    width: 5em;
+    height: 5em;;
+}
+
+
+#current{
+    width: 8em;
+    height: 8em;
+}
+
+
+/* ------------- Search Items ------------- */
+#search{
+    height: 20px;
+    margin-top: 1em;
+    text-align: center;
+    display: inline-flex;
+}
+
+#button{
+    padding: 0.25em;
+    outline: none;
+    background-color: #FFF;
+}
+
+#text_input{
+    padding: 0.25em;
+}
+
+/* ------------- Main Page Content ------------- */
+#main_content{
+    display: inline-flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2em;
+}
+
+#stats, #types, #flavor_text, #sprites{
+    display: block;
+    width: 50%;
+    height: 12em;
+}
+
+#types, #flavor_text{
+    background-color: orange;
+}
+
+#types   img{
+    width: 45%;
+}
+
+#main_content h3{
+    margin: 0.5em 0 0 0.5em;
+    font-family: 'Patua One', cursive;
+    color: #B9423E;
+}
+
+.inner_sprites{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 2.5%;
+}
+
+.inner_sprites .sprite{
+    width: 20%;
+    height: 20%;
+}
+
+/* ------------- Evolutions ------------- */
+.flex_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex_aligner_top{
+    align-self: flex-start;
+}
+
+.flex_aligner_bot{
+    align-self: flex-end;
+}
+
+/* ------------- Sprite Selector ------------- */
+#sprite_type_selector{
+    margin: auto;
+    margin-top: 1em;
+}
+
+#sprites{
+    text-align: center;
+}
+
+#sprites h3{
+    float: left;
+}
+
+/* ------------- Flavor Text ------------- */
+#flavor_text p{
+    margin-top: 0.5em;
+    padding: 0 0.5em 0 0.5em;
+    height: 70%;
+    overflow-y: scroll;
+}
+
+#flavor_text p::-webkit-scrollbar-thumb {
+    background: #E4E4E9;
+}
+
+#flavor_text p::-webkit-scrollbar-thumb:hover {
+    background: #FFF;
+}
+
+/* ------------- Stats ------------- */
+
+#stat_name_holder, #stat_holder{
+    padding:  0.25em 0.75em 0.75em 0.75em;
+}
+
+#stat_info_boxes{
+    display: inline-flex;
+    width: 100%;
+}
+#stat_name_holder{
+    width: 25%;
+    justify-content: flex-end;
+    text-align: right;
+    line-height: 1.5em;
+    padding-right: 0.25em;
+    
+}
+#stat_holder{
+    width: 75%;
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+.stat{
+    height: em;
+    background-color: #F26200;
+    margin-bottom: 0.3em;
+    color: #FFF;
+    padding: 0.25em;
+    font-size: 0.8em;
+}
+
+/* Etc. (no longer in use)
+.stats{
+    width: 25%;
+    border-radius: .5em;
+    border-width: 0.5em;
+    background-color: #F26300;
+}
+
+.stats p{
+    font-size: 0.5em;
+}
+
+.paragraph_holder{
+    flex-direction: column;
+    width: 65%;
+    padding: 2em;
+    background-color: #FFF;
+    border-radius: 0.5em;
+}
+
+.paragraph_holder p{
+    padding: 0 0 0 0;
+    text-indent: 2em;
+}
+
+#pseudo_page p{
+    font-size: 1.5em;
+}
+*/

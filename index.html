@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Unofficial Pokedex</title>
+    
+    <link href='js-css/dex_css.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Kumar+One+Outline%7CPatua+One%7CLato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+    
+<body>
+    <main>
+        <div id="side_nav">
+            <img id="main_img" src="images/magikarp.png" alt="KARP">
+                                        <!-- Search bar -->
+            <section id="search">
+                <input id="text_input" type="text" size="13" autofocus value="Search by Number" />
+                <button type="button" id="search_button">Search</button>
+            </section>
+            <ul id="pokemon_list">
+                
+                <!-- Add all the pokemon to the list here -->
+                <!-- Commenting out test 
+                <li><span>#001</span> Bulbae</li>
+                <li><span>#002</span> Plantbih</li>
+                <li><span>#003</span> Thiccysaur</li>
+                <li id="current_pokemon"><span>#004</span> Toastyboi</li>
+                <li><span>#005</span> Warmlad</li>
+                <li><span>#006</span> Spicylizard</li>
+                <li><span>#007</span> Moisturt</li>
+                <li><span>#008</span> Dample</li>
+                <li><span>#009</span> Wetcannon</li>
+                <li><span>#010</span> Catapata</li>
+                <li><span>#011</span> Harden</li>
+                <li><span>#012</span> Butter</li>
+                <li><span>#013</span> Ithinkitsabug?</li>
+                -->
+                
+            </ul>
+        </div>
+        <div id="slide_page">
+            <div class="center">
+                <div id="main_page">
+                    <!-- <img id="main_img" src="magikarp.png" alt="KARP"> -->
+                    <!-- <h1 id="title">Magidex</h1> -->
+                    <div id="pseudo_page">
+                        <h2>#004 Toastyboi</h2> <!-- Pull the current Pokemon's name and number then drop it here -->
+                        <div class="pseudo_page_inner"> <!-- Pokemon Specific Flavor text goes in the p tag, stats go in the stats div -->
+                            <!-- Main mav bar at the top -->
+                            <section class="previous_current_next">
+                                <div class="empty"></div>   <!-- For spacing -->
+                                <a id="prev_arrow"><i class="fas fa-arrow-left"></i></a> <!-- Direct to prev pkmn -->
+                                <a id="previous"> </a>   <!-- Fill with sprite of prev pkmn -->
+                                <div class="empty"></div>   <!-- For spacing -->
+                                <a id="current"> </a>    <!-- Fill with sprite of current pkmn -->
+                                <div class="empty"></div>   <!-- For spacing -->
+                                <a id="next"> </a>       <!-- Fill with sprite of next pkmn -->
+                                <a id="next_arrow"><i class="fas fa-arrow-right"></i></a> <!-- Direct to next pkmn -->
+                                <div class="empty"></div>   <!-- For spacing -->
+                            </section>
+                            
+                            <!-- Info/Content section -->
+                            <section id="main_content">
+                                <div id="stats">
+                                    <h3>Stats</h3>
+                                    <div id="stat_info_boxes">
+                                        <div id="stat_name_holder">
+                                            <h4 class="stat_name" >HP</h4>
+                                            <h4 class="stat_name" >ATK</h4>
+                                            <h4 class="stat_name" >DEF</h4>
+                                            <h4 class="stat_name" >SP ATK</h4>
+                                            <h4 class="stat_name" >SP DEF</h4>
+                                            <h4 class="stat_name" >SPD</h4>
+                                        </div>
+                                        <div id="stat_holder">
+                                            <!-- Set all the widths in the style as percentages AND as the innerHTML -->
+                                            <div class="stat" style="width: 20%;" id="stat_hp">###</div>
+                                            <div class="stat" style="width: 15%;" id="stat_atk">###</div>
+                                            <div class="stat" style="width: 55%;" id="stat_def">###</div>
+                                            <div class="stat" style="width: 80%;" id="stat_sp_atk">###</div>
+                                            <div class="stat" style="width: 40%;" id="stat_sp_def">###</div>
+                                            <div class="stat" style="width: 20%;" id="stat_spd">###</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="types">
+                                    <h3>Types</h3>
+                                    <div class="inner_sprites">
+                                        <img class="sprite" src="sprite_placeholder.png" alt="sprite1" id="first_type">
+                                        <img class="sprite" src="sprite_placeholder.png" alt="sprite2" id="second_type">
+                                    </div>
+                                </div>
+                                <div id="flavor_text">
+                                    <h3>Flavor Text</h3>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                                </div>
+                                <div id="sprites">
+                                    <h3>Sprites</h3>
+                                    <div class="inner_sprites">
+                                        <div class="empty"></div>   <!-- For spacing -->
+                                        <img class="sprite" src="sprite_placeholder.png" alt="sprite1" id="sprite_front">
+                                        <img class="sprite" src="sprite_placeholder.png" alt="sprite2" id="sprite_back">
+                                        <div class="empty"></div>   <!-- For spacing -->
+                                    </div>
+                                    <select id="sprite_type_selector">
+                                        <option value="default">Default</option>
+                                        <option value="shiny">Shiny</option>
+                                    </select>
+
+
+                                    <!-- Insert Sprite Images here -->
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js-css/dex_api.js"></script>
+    <script>
+        // MAIN URL: http://pokeapi.salestock.net/api/v2/
+    </script>
+</body>
+</html>
